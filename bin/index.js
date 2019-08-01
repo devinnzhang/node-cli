@@ -8,6 +8,11 @@ var chalk = require('chalk');
 var figlet = require('figlet');
 var ora = require('ora');
 var exec = require('promise-exec');
+var path = require('path');
+
+var analyze = require('./analyze').analyze;
+
+analyze(path.resolve('../fidea/src/router.js'));
 
 console.log(
 	chalk.green(
